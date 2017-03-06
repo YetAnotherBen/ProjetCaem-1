@@ -1,14 +1,30 @@
+{{----CALLING THE DEFAULT LAYOUT--}}
 @extends('front.layouts.default')
+{{--------------------------------}}
 
+
+
+
+{{---HEAD TITLE :---}}
 @section('pageTitle')
 CAEM - Évenements
 @endsection
+{{------------------}}
 
+
+
+
+{{--HEAD OGTAGS :--}}
 @section('ogtags')
     @include('front.includes.og_tags', ['title' => 'CAEM Besançon École de musique - Évenements'])
 		{{-- you can precise title, type, url, image, description--}}
 @stop
+{{------------------}}
 
+
+
+
+{{--MAIN CONTENT :--}}
 @section('pageContent')
 <main class="container">
 
@@ -44,3 +60,4 @@ CAEM - Évenements
 		@endforeach
 </main>
 @endsection
+{{------------------}}

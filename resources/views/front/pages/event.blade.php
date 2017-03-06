@@ -1,17 +1,30 @@
+{{----CALLING THE DEFAULT LAYOUT--}}
 @extends('front.layouts.default')
+{{--------------------------------}}
 
+
+
+
+{{---HEAD TITLE :---}}
 @section('pageTitle')
 CAEM - Évenements
 @endsection
+{{------------------}}
 
 
+
+
+{{--HEAD OGTAGS :--}}
 @section('ogtags')
-    @include('front.includes.og_tags', ['title' => $event->title,
-																	'image' => $event->image,
-																	'description' => strip_tags(mb_strimwidth($event->content, 0, 75, "..."))])
+    @include('front.includes.og_tags', ['title' => $event->title, 'image' => $event->image, 'description' => strip_tags(mb_strimwidth($event->content, 0, 75, "..."))])
 		{{-- you can precise title, type, url, image, description--}}
 @stop
+{{------------------}}
 
+
+
+
+{{--MAIN CONTENT :--}}
 @section('pageContent')
 <main id="event" class="container">
 
@@ -43,3 +56,4 @@ CAEM - Évenements
 </section>
 </main>
 @endsection
+{{------------------}}

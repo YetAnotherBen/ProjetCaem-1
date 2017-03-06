@@ -1,14 +1,30 @@
+{{----CALLING THE DEFAULT LAYOUT--}}
 @extends('front.layouts.default')
+{{--------------------------------}}
 
+
+
+
+{{---HEAD TITLE :---}}
 @section('pageTitle')
 CAEM - L'équipe
 @endsection
+{{------------------}}
 
+
+
+
+{{--HEAD OGTAGS :--}}
 @section('ogtags')
     @include('front.includes.og_tags', ['title' => 'CAEM Besançon École de musique - Équipe'])
 		{{-- you can precise title, type, url, image, description--}}
 @stop
+{{------------------}}
 
+
+
+
+{{--MAIN CONTENT :--}}
 @section('pageContent')
 <main class="container mainEquipe">
 
@@ -26,7 +42,7 @@ CAEM - L'équipe
 					@if($professeur->picture != null)
 					<img src="uploads/{{ $professeur->picture }}">
 					@else
-					<img src="uploads/photo_team/placeholder.png">
+					<img src="{{ asset('images/placeholder.png')}}">
 					@endif
 				</figure>
 
@@ -56,7 +72,7 @@ CAEM - L'équipe
 					@if($bureau->picture != null)
 					<img src="uploads/{{ $bureau->picture }}">
 					@else
-					<img src="uploads/photo_team/placeholder.png">
+					<img src="{{ asset('images/placeholder.png')}}">
 					@endif
 				</figure>
 
@@ -85,7 +101,7 @@ CAEM - L'équipe
 					@if($administration->picture != null)
 					<img src="uploads/{{ $administration->picture }}">
 					@else
-					<img src="uploads/photo_team/placeholder.png">
+					<img src="{{ asset('images/placeholder.png')}}">
 					@endif
 				</figure>
 
@@ -111,3 +127,4 @@ CAEM - L'équipe
 
 </main>
 @endsection
+{{------------------}}

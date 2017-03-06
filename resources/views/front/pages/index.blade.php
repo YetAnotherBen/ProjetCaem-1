@@ -1,17 +1,30 @@
+{{----CALLING THE DEFAULT LAYOUT--}}
 @extends('front.layouts.default')
+{{--------------------------------}}
 
 
+
+
+{{---HEAD TITLE :---}}
 @section('pageTitle')
-CAEM - INDEX
+CAEM - École de musique
 @endsection
+{{------------------}}
 
 
 
+
+{{--HEAD OGTAGS :--}}
 @section('ogtags')
     @include('front.includes.og_tags', ['title' => 'CAEM Besançon École de musique - Accueil'])
 		{{-- you can precise title, type, url, image, description--}}
 @stop
+{{------------------}}
 
+
+
+
+{{--MAIN CONTENT :--}}
 @section('pageContent')
 <main class="container">
 
@@ -60,3 +73,4 @@ CAEM - INDEX
 <!--END NEWS -->
 </main>
 @endsection
+{{------------------}}

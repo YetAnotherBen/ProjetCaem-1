@@ -1,15 +1,30 @@
+{{----CALLING THE DEFAULT LAYOUT--}}
 @extends('front.layouts.default')
+{{--------------------------------}}
 
 
+
+
+{{---HEAD TITLE :---}}
 @section('pageTitle')
 CAEM - Mon parcours musical
 @endsection
+{{------------------}}
 
+
+
+
+{{--HEAD OGTAGS :--}}
 @section('ogtags')
     @include('front.includes.og_tags', ['title' => 'CAEM Besançon École de musique - Mon parcours musical'])
 		{{-- you can precise title, type, url, image, description--}}
 @stop
+{{------------------}}
 
+
+
+
+{{--MAIN CONTENT :--}}
 @section('pageContent')
 <main class="container mainParcoursMusical">
 
@@ -62,13 +77,6 @@ CAEM - Mon parcours musical
 					<p>{{ $activity->when }}</p>
 				</div>
 
-<!--
-				<div class="col-md-4">
-					<h4>Avec qui ?</h4>
-					<p>{{ $activity->person }}</p>
-				</div>
--->
-
 				<div class="col-md-6">
 					<h4>Tarifs :</h4>
 					<p>{{ $activity->price }}</p>
@@ -97,7 +105,12 @@ CAEM - Mon parcours musical
 
 </main>
 @endsection
+{{------------------}}
 
+
+
+
+{{--SCRIPT RELATED TO THE PAGE :--}}
 @section('pageScript')
 <script>
 
@@ -132,3 +145,4 @@ function displayActivity()
 	}
 	</script>
 @endsection
+{{------------------}}
