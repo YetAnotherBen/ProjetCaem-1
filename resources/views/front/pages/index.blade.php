@@ -56,7 +56,7 @@ CAEM - École de musique
 							<h2>{{ $actuality->title }}</h2>
 							<time datetime="{{ $actuality->date }}">{{ $typeActuality->formatDate }}</time>
 						</figcaption>
-  						<img class="img-responsive center-block" src="{{ url('images/250/'.str_replace("/","@",$actuality->image)) }}" alt="">
+  						<img class="img-responsive center-block" src="{{ url('images_resize/1000/'.str_replace("/","@",$actuality->image)) }}" alt="">
 					</figure>
 					<div class="description">
 						{!! $actuality->content !!}
