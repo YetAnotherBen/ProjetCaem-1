@@ -40,7 +40,7 @@ CAEM - L'équipe
 
 				<figure>
 					@if($professeur->picture != null)
-					<img src="uploads/{{ $professeur->picture }}">
+					<img src="{{ url('images_fit/250x250/'.str_replace("/","@",$professeur->picture)) }}">
 					@else
 					<img src="{{ asset('images/placeholder.png')}}">
 					@endif
@@ -70,7 +70,7 @@ CAEM - L'équipe
 
 				<figure>
 					@if($bureau->picture != null)
-					<img src="uploads/{{ $bureau->picture }}">
+					<img src="{{ url('images_fit/250x250/'.str_replace("/","@",$bureau->picture)) }}">
 					@else
 					<img src="{{ asset('images/placeholder.png')}}">
 					@endif
@@ -99,7 +99,7 @@ CAEM - L'équipe
 			<article>
 				<figure>
 					@if($administration->picture != null)
-					<img src="uploads/{{ $administration->picture }}">
+					<img src="{{ url('images_fit/250x250/'.str_replace("/","@",$administration->picture)) }}">
 					@else
 					<img src="{{ asset('images/placeholder.png')}}">
 					@endif
