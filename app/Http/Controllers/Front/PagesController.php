@@ -95,6 +95,9 @@ public function contact()
 	return view('front.pages.contact');
 }
 
-
+public function alert()
+{
+	return view('front.includes.alert');
+}
 
 }
